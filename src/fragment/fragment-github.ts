@@ -37,6 +37,17 @@ export class GithubFragment extends EmoFragment {
       })
 
     new Setting(el)
+      .setName(t('private repo'))
+      .setDesc(t('private repo desc'))
+      .addToggle((toggle) => {
+        toggle.setValue(parms.isPrivate)
+        toggle.onChange(async (value) => {
+          parms.isPrivate = value
+          await plugin.saveSettings()
+        })
+      })
+
+    new Setting(el)
       .setName(t('branch'))
       .addText((text) => {
         text

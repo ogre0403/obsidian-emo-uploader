@@ -19,6 +19,8 @@ export default {
   'Github Settings': 'Github Settings',
   owner: 'owner',
   repo: 'repo',
+  'private repo': 'private repo',
+  'private repo desc': 'If the repo is private, token will also used for view the image.',
   branch: 'branch',
   token: 'token',
   message: 'message',

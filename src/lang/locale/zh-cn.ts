@@ -19,6 +19,8 @@ export default {
   'Github Settings': 'Github配置',
   owner: '用户名',
   repo: '仓库',
+  'private repo': '私有仓库',
+  'private repo desc': '若是私有仓库，令牌也将用于查看影像。',
   branch: '分支',
   token: '令牌',
   message: '提交信息',
