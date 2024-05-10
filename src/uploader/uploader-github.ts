@@ -43,6 +43,9 @@ export class GithubUploader extends EmoUploader {
       request(req).then(() => {
         let markdownText: string
         console.log(this.parms.cdn)
+        if (this.parms.isPrivate) {
+          filePath += `?token=${this.parms.required.token}`
+        }
         switch (this.parms.cdn) {
           case CDNprovider.jsdelivr:
             markdownText = `![gh](https://cdn.jsdelivr.net/gh/${this.parms.required.owner}/${this.parms.required.repo}@${this.parms.required.branch}/${filePath})`
